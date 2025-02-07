@@ -57,7 +57,7 @@
 
       try {
         // Replace with your Google Apps Script URL
-        const scriptUrl = 'https://script.google.com/macros/s/AKfycbw8o8IfJRTR31gAxiGihkJ1ALy0_sh5F4wJOFAiMCUoyRnrJ-XVRtkG7k66UG5tKSLGEw/exec'; 
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwHNeh0HgMJBP30z0Z5QaIrD87_abPEcGVj2wmeDbawwGYKzmVaEc-KZndlphOlg7_EHg/exec'; 
         const response = await fetch(`${scriptUrl}?userId=${encodeURIComponent(userId)}`);
         const message = await response.text();
 
