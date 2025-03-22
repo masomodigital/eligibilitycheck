@@ -8,11 +8,21 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 50px;
+      margin: 0;
+      background-color: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 320px;
     }
     form {
-      margin: 20px auto;
-      width: 300px;
       display: flex;
       flex-direction: column;
     }
@@ -38,14 +48,15 @@
   </style>
 </head>
 <body>
-  <h2>CHECK DAYS TO MY EXPIRY</h2>
-  <form id="eligibilityForm">
-    <label for="userId">Enter Your USER ID:</label>
-    <input type="text" id="userId" name="userId" required>
-    <button type="submit">Check Days to Expiry</button>
-  </form>
-  <div class="result" id="result"></div>
-
+  <div class="container">
+    <h2>CHECK DAYS TO MY EXPIRY</h2>
+    <form id="eligibilityForm">
+      <label for="userId">Enter Your USER ID:</label>
+      <input type="text" id="userId" name="userId" required>
+      <button type="submit">Check Days to Expiry</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
   <script>
     document.getElementById('eligibilityForm').addEventListener('submit', async function (e) {
       e.preventDefault();
